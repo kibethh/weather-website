@@ -8,7 +8,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback("Unable to connect to find location!!", undefined);
         } else {
-            callback(undefined, body.current.weather_descriptions [0] + ". It is currently " + body.current.temperature + " degree out. it feels like " + body.current.feelslike + " degrees out.");
+            callback(undefined, body.current.weather_descriptions [0] + ".It is currently " + body.current.temperature + " degree out. it feels like " + body.current.feelslike + " degrees out.The observation was done at: "+body.current.observation_time);
     }
     });
 };
